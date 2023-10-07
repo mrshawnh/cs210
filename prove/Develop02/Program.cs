@@ -31,10 +31,8 @@ Console.WriteLine();
 
 _action = mainMenu();
 
-while (_action != 5)
-{
-    if (_action == 1)
-    {
+while (_action != 5){
+    if (_action == 1){
         Console.WriteLine();
 
         e._journalPrompt = pG.generatePrompt();
@@ -58,13 +56,18 @@ while (_action != 5)
     }
     else if (_action == 3){
         Console.WriteLine();
+
         e.LoadJournal();
+
         Console.WriteLine();
+
         _action = mainMenu();
     }
     else if (_action == 4){
         Console.WriteLine();
+
         e.SaveJournal();
+        
         Console.WriteLine();
 
         _action = mainMenu();
