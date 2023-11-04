@@ -15,22 +15,13 @@ public class BreathingActivity: Activity{
         Console.WriteLine();
         Console.WriteLine("Breathe In");
 
-        for (int i = 5; i > 0; i--){
-
-            Console.Write(".");
-            Thread.Sleep(1000);
-        }
+        Countdown(5);
         
-        Console.WriteLine();
         Console.WriteLine();
 
         Console.WriteLine("Breathe Out");
-        for (int i = 5; i > 0; i--){
 
-            Console.Write(".");
-            Thread.Sleep(1000);
-        }
-        Console.WriteLine();
+        Countdown(5);
         }
 
         Console.WriteLine();

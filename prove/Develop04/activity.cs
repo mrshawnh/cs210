@@ -19,10 +19,29 @@ public class Activity{
     }
 
     public void Spinner(){
+        int i = 0;
         CreateSpinner();
-        foreach(string s in _spinner){
+        DateTime sTime = DateTime.Now;
+        DateTime eTime = sTime.AddSeconds(10);
+
+        while (DateTime.Now < eTime){
+            string s = _spinner[i];
             Console.Write(s);
-            Thread.Sleep(750);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+
+            i++;
+
+            if (i >= _spinner.Count){
+                i = 0;
+            }
+        }
+    }
+
+    public void Countdown(int count){
+        for (int s = count; s >= 1; s--){
+            Console.Write(s);
+            Thread.Sleep(1000);
             Console.Write("\b \b");
         }
     }

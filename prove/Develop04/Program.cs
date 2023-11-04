@@ -8,6 +8,7 @@ class Program
         int option = 0;
         Activity activity = new Activity();
         BreathingActivity b = new BreathingActivity();
+        ReflectionActivity r = new ReflectionActivity();
 
         void Menu(){
             Console.WriteLine("Menu options");
@@ -22,17 +23,18 @@ class Program
 
         Menu();
         if (option == 1){
-            activity.SetActivity("Breathing Activity");
-            activity.SetDescription("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
-            activity.WelcomeMessage();
-            b.Breathing(activity.GetTimer());
-            activity.EndMessage();
-
-
+            b.SetActivity("Breathing Activity");
+            b.SetDescription("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
+            b.WelcomeMessage();
+            b.Breathing(b.GetTimer());
+            b.EndMessage();
         }
         else if (option == 2){
-            activity.SetActivity("Reflection Activity");
-            activity.SetDescription("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
+            r.SetActivity("Reflection Activity");
+            r.SetDescription("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
+            r.WelcomeMessage();
+            r.Reflection(r.GetTimer());
+            r.EndMessage();
         }
         else if (option == 3){
             activity.SetActivity("Listing Activity");
