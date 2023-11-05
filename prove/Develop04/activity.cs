@@ -56,8 +56,6 @@ public class Activity{
 
     public void WelcomeMessage(){
         Console.Clear();
-        
-        int time;
 
         Console.WriteLine($"Welcome to the {_activityName}.");
         Console.WriteLine();
@@ -65,10 +63,8 @@ public class Activity{
         Console.WriteLine();
 
         Console.Write("How long, in seconds, would you like your session? ");
-        time = int.Parse(Console.ReadLine());
+        int time = int.Parse(Console.ReadLine());
         _timer = time;
-
-        
     }
 
     public int GetTimer(){
@@ -79,7 +75,4 @@ public class Activity{
         Console.WriteLine();
         Console.WriteLine($"You have completed another {_timer} seconds of the {_activityName}.");
     }
-
-    
-    
 }

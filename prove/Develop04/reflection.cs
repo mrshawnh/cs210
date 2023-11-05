@@ -52,20 +52,16 @@ public class ReflectionActivity : Activity{
             Console.WriteLine(GetQuestion());
             Spinner();
         }
-
-
-
     }
 
     public string GetPrompt(){
         
-        string prompt = _rprompts[random.Next(0, _rprompts.Count)];
+        string prompt = _rprompts[random.Next(0, _rprompts.Count - 1)];
         return prompt;
-
     }
 
     public string GetQuestion(){
-        string question = _questions[random.Next(0, _questions.Count)];
+        string question = _questions[random.Next(0, _questions.Count - 1)];
         return question;
     }
 }
