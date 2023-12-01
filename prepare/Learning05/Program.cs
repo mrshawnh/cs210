@@ -15,12 +15,19 @@ class Program
         Circle s3 = new Circle("Yellow", 3);
         shapes.Add(s3);
 
+        s1 = new Square("Red", 5);
+        shapes.Add(s1);
+
+
         foreach (Shape s in shapes){
             string color = s.GetColor();
             double area = s.GetArea();
 
             Console.WriteLine($"The color of the shape is {color}, and the area is {area}.");
         }
+
+
+        
 
     }
 }
